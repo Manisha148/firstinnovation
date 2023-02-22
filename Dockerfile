@@ -1,5 +1,5 @@
-FROM ubuntu
-RUN apt update && apt install nodejs apache2 lighttpd npm -y
+FROM node
+# RUN apt update && apt install nodejs apache2 lighttpd npm -y
 COPY api.js .
 # Create app directory
 WORKDIR /usr/src/app
