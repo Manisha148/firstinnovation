@@ -4,7 +4,7 @@ const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000;
 
 // for checking the api is working or not
-console.log("Keys", process.env.PORT, process.env.OPENAI_API_KEY)
+console.log("Keys", process.env)
 
 
 const app = express();
