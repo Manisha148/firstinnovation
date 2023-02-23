@@ -7,9 +7,6 @@ node {
         checkout scm
     }
     
-    environment {
-        testing = "testing"
-    }
 
     stage('Build image') {
         sh 'cp /var/lib/jenkins/workspace/api.js /var/lib/jenkins/workspace/nodejs/'
