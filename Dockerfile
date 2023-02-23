@@ -25,7 +25,7 @@
 
 
 FROM node:16
-COPY .env .
+COPY /.env .
 # Create app directory
 WORKDIR /usr/src/app
 
