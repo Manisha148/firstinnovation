@@ -11,7 +11,7 @@ node {
     stage('Build image') {
         sh 'cp /var/lib/jenkins/workspace/api.js /var/lib/jenkins/workspace/nodejs/'
   
-       app = docker.build("manishaverma/javaimg")
+       app = docker.build("manishaverma/javaimg:10")
     }
     
 
@@ -31,7 +31,7 @@ node {
         }
      }
     stage('deploy'){
-        sh 'docker run -id -d -p 3000:5000 -e OPENAI_API_KEY="${OPENAI_API_KEY}" manishaverma/javaimg:latest'
+        sh 'docker run -id -d -p 5000:5000 -e OPENAI_API_KEY="${OPENAI_API_KEY}" manishaverma/javaimg:latest'
     }
 
 
