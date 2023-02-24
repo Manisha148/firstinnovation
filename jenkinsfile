@@ -31,7 +31,7 @@ node {
         }
      }
     stage('deploy'){
-        sh 'docker run -id -d -p 3000:5000 -e OPENAI_API_KEY="${OPENAI_API_KEY}" manishaverma/javaimg:latest'
+        sh 'docker run  3000:5000 -e OPENAI_API_KEY="${OPENAI_API_KEY}" manishaverma/javaimg:latest'
     }
 
 
